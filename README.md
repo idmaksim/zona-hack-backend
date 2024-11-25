@@ -1,21 +1,15 @@
-# 📚 NestJS Project for Text Summarization
-
-## 📝 Description
-
-This project implements an API for summarizing text documents. It supports `.txt`, `.docx`, and `.pdf` formats. Leveraging the power of NestJS, the project ensures high performance and scalability.
-
 ## 🚀 Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/idmaksim/docs-summary-backend.git
+   git clone https://github.com/idmaksim/zona-hack-backend.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd docs-summary-backend
+   cd zona-hack-backend
    ```
 
 3. Install the dependencies:
