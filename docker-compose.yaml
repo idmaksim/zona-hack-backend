@@ -8,8 +8,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+      POSTGRES_PORT: 5432
     ports:
-      - '5432:5432'
+      - '5433:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
     healthcheck:
@@ -35,12 +36,14 @@ services:
     command: >
       sh -c "npx prisma migrate reset --force &&  npm run start:prod"
     ports:
-      - '3000:3000'
+      - '3001:3001'
     environment:
+      - PORT=3001
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
       - ACCESS_SECRET=access_secret
       - REFRESH_SECRET=refresh_secret
       - REDIS_URL=redis://redis:6379
+
     depends_on:
       redis:
         condition: service_healthy
